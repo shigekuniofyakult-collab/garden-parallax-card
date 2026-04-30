@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Garden Layered 3D Parallax Card</title>
+  <title>Garden Layered 3D Parallax Card v4</title>
   <style>
     :root {
       --x: 0;
@@ -80,7 +80,7 @@
 
     .stage {
       width: 100%;
-      perspective: 1200px;
+      perspective: 980px;
       perspective-origin: 50% 45%;
       touch-action: none;
       user-select: none;
@@ -96,18 +96,18 @@
         rotateX(var(--rx))
         rotateY(var(--ry));
       transform-style: preserve-3d;
-      transition: transform 80ms linear;
+      transition: transform 60ms linear;
       will-change: transform;
       filter:
-        drop-shadow(calc(var(--x) * -10px) calc(24px + var(--y) * 8px) 28px rgba(0, 0, 0, .42))
-        drop-shadow(0 12px 60px rgba(42, 70, 45, .18));
+        drop-shadow(calc(var(--x) * -14px) calc(26px + var(--y) * 12px) 34px rgba(0, 0, 0, .48))
+        drop-shadow(0 18px 72px rgba(42, 70, 45, .22));
     }
 
     .card-back {
       position: absolute;
       inset: 10px;
       border-radius: inherit;
-      transform: translate3d(calc(var(--x) * -5px), calc(var(--y) * -4px + 12px), -26px) scale(.985);
+      transform: translate3d(calc(var(--x) * -8px), calc(var(--y) * -6px + 14px), -30px) scale(.98);
       background: linear-gradient(135deg, rgba(65, 82, 62, .9), rgba(9, 17, 12, .96));
       box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, .20),
@@ -124,7 +124,7 @@
       height: 100%;
       overflow: hidden;
       border-radius: inherit;
-      transform: translateZ(26px);
+      transform: translateZ(32px);
       background: #132016;
       box-shadow:
         inset 0 0 0 1px rgba(255, 255, 255, .13),
@@ -133,7 +133,7 @@
 
     .scene-plane {
       position: absolute;
-      inset: -4%;
+      inset: -7%;
       transform-style: preserve-3d;
     }
 
@@ -146,7 +146,7 @@
       pointer-events: none;
       will-change: transform;
       transform-origin: center;
-      transition: transform 90ms linear;
+      transition: transform 65ms linear;
     }
 
     .layer-base {
@@ -154,7 +154,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transform: translate3d(calc(var(--x) * -8px), calc(var(--y) * -5px), 0);
+      transform: translate3d(calc(var(--x) * -14px), calc(var(--y) * -10px), 0) scale(1.035);
       filter: saturate(1.04) contrast(1.015) brightness(1.02);
     }
 
@@ -163,8 +163,8 @@
       top: 26.3889%;
       width: 100%;
       height: 52.3438%;
-      transform: translate3d(calc(var(--x) * 5px), calc(var(--y) * 3px), 0);
-      filter: drop-shadow(calc(var(--x) * -2px) calc(var(--y) * -1px) 4px rgba(0,0,0,.12));
+      transform: translate3d(calc(var(--x) * 12px), calc(var(--y) * 8px), 0) scale(1.02);
+      filter: drop-shadow(calc(var(--x) * -3px) calc(var(--y) * -2px) 6px rgba(0,0,0,.14));
     }
 
     .layer-left {
@@ -172,8 +172,8 @@
       top: 0%;
       width: 39.5833%;
       height: 100%;
-      transform: translate3d(calc(var(--x) * 14px), calc(var(--y) * 8px), 0);
-      filter: drop-shadow(calc(var(--x) * -4px) calc(var(--y) * -2px) 7px rgba(0,0,0,.18));
+      transform: translate3d(calc(var(--x) * 24px), calc(var(--y) * 15px), 0) scale(1.03);
+      filter: drop-shadow(calc(var(--x) * -6px) calc(var(--y) * -4px) 10px rgba(0,0,0,.20));
     }
 
     .layer-bottom {
@@ -181,8 +181,8 @@
       top: 59.2014%;
       width: 100%;
       height: 40.7986%;
-      transform: translate3d(calc(var(--x) * 18px), calc(var(--y) * 10px), 0);
-      filter: drop-shadow(calc(var(--x) * -4px) calc(var(--y) * -2px) 8px rgba(0,0,0,.20));
+      transform: translate3d(calc(var(--x) * 30px), calc(var(--y) * 18px), 0) scale(1.04);
+      filter: drop-shadow(calc(var(--x) * -6px) calc(var(--y) * -4px) 12px rgba(0,0,0,.22));
     }
 
     .layer-tree {
@@ -190,8 +190,8 @@
       top: 0%;
       width: 47.3307%;
       height: 100%;
-      transform: translate3d(calc(var(--x) * 24px), calc(var(--y) * 13px), 0);
-      filter: drop-shadow(calc(var(--x) * -5px) calc(var(--y) * -3px) 10px rgba(0,0,0,.22));
+      transform: translate3d(calc(var(--x) * 40px), calc(var(--y) * 24px), 0) scale(1.05);
+      filter: drop-shadow(calc(var(--x) * -8px) calc(var(--y) * -5px) 14px rgba(0,0,0,.24));
     }
 
     .shade,
@@ -207,7 +207,7 @@
       background:
         radial-gradient(circle at 50% 35%, transparent 0 48%, rgba(0,0,0,.16) 100%),
         linear-gradient(180deg, transparent 62%, rgba(0,0,0,.18) 100%);
-      opacity: .7;
+      opacity: .62;
     }
 
     .shine {
@@ -338,7 +338,7 @@
     </section>
 
     <aside class="hint" aria-live="polite">
-      <div class="status" id="status">PCではマウス移動。スマホでは「傾きセンサーを使う」を押してから、端末をゆっくり傾けてください。</div>
+      <div class="status" id="status">PCではマウス移動。スマホでは「傾きセンサーを使う」を押してから、端末をゆっくり傾けてください。今回は動きを強めています。</div>
       <div class="actions">
         <button type="button" id="sensorButton">傾きセンサーを使う</button>
         <button type="button" class="secondary" id="resetButton">中心をリセット</button>
@@ -376,19 +376,19 @@
       }
 
       function render() {
-        state.currentX += (state.targetX - state.currentX) * 0.12;
-        state.currentY += (state.targetY - state.currentY) * 0.12;
+        state.currentX += (state.targetX - state.currentX) * 0.18;
+        state.currentY += (state.targetY - state.currentY) * 0.18;
 
         const x = state.currentX;
         const y = state.currentY;
 
         root.style.setProperty('--x', round(x));
         root.style.setProperty('--y', round(y));
-        root.style.setProperty('--rx', `${round(y * -7.5)}deg`);
-        root.style.setProperty('--ry', `${round(x * 9.5)}deg`);
-        root.style.setProperty('--shine-x', `${round(50 + x * 30)}%`);
-        root.style.setProperty('--shine-y', `${round(24 + y * 22)}%`);
-        root.style.setProperty('--shine-opacity', round(0.12 + Math.min(0.16, Math.hypot(x, y) * 0.12)));
+        root.style.setProperty('--rx', `${round(y * -10.5)}deg`);
+        root.style.setProperty('--ry', `${round(x * 14)}deg`);
+        root.style.setProperty('--shine-x', `${round(50 + x * 38)}%`);
+        root.style.setProperty('--shine-y', `${round(22 + y * 30)}%`);
+        root.style.setProperty('--shine-opacity', round(0.14 + Math.min(0.22, Math.hypot(x, y) * 0.16)));
 
         requestAnimationFrame(render);
       }
@@ -419,8 +419,8 @@
           state.baseGamma = gamma;
         }
 
-        const x = (gamma - state.baseGamma) / 20;
-        const y = (beta - state.baseBeta) / 22;
+        const x = (gamma - state.baseGamma) / 16;
+        const y = (beta - state.baseBeta) / 18;
 
         setTarget(x, y);
       }
@@ -448,7 +448,7 @@
           state.baseBeta = null;
           state.baseGamma = null;
 
-          status.textContent = '傾きセンサーが有効です。今の持ち方を中心にして、ゆっくり傾けてください。';
+          status.textContent = '傾きセンサーが有効です。今の持ち方を中心にして、ゆっくり傾けると、前回より大きく動きます。';
         } catch (error) {
           status.textContent = '傾きセンサーの開始に失敗しました。HTTPS環境で開いているか確認してください。';
         }
@@ -473,5 +473,5 @@
       render();
     })();
   </script>
- </body>
+</body>
 </html>

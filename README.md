@@ -1,21 +1,10 @@
-# Garden Layered 3D Parallax Card
+# Garden Layered 3D Parallax Card v4
 
-アップロード写真を使った、本格レイヤー版の3Dパラックスカードです。
+アップロード写真を使った、動きを強めた本格レイヤー版の3Dパラックスカードです。
 
-## ファイル構成
+- v3よりも傾き角度を強化
+- 各レイヤーの移動量を増加
+- 光沢の追従量を増加
+- カードの追従速度を少し高速化
 
-- `index.html`：表示用HTML
-- `assets/garden-original.jpg`：元写真
-- `assets/layer-midground.webp`：東屋・人物・道などの中景レイヤー
-- `assets/layer-foreground-left.webp`：左の葉・柵まわりの前景レイヤー
-- `assets/layer-foreground-bottom.webp`：橋・池・手前植物の前景レイヤー
-- `assets/layer-foreground-tree.webp`：右の大きな木の前景レイヤー
-
-## スマホ確認の注意
-
-スマホの傾きセンサーは、HTTPS環境で開く必要がある場合があります。
-iPhoneでは、画面上の「傾きセンサーを使う」ボタンを押したあと、許可が必要になることがあります。
-
-## PC確認
-
-PCでは `index.html` をブラウザで開き、カード上でマウスを動かしてください。
+公開時は GitHub Pages などの HTTPS 環境を利用してください。
